@@ -1,12 +1,12 @@
 package main
 
 import (
-	"github.com/iesreza/io"
-	"github.com/iesreza/io/apps/admin"
-	"github.com/iesreza/io/apps/adminlte"
-	"github.com/iesreza/io/apps/auth"
-	"github.com/iesreza/io/apps/query"
-	"github.com/iesreza/io/apps/test"
+	"github.com/getevo/evo"
+	"github.com/getevo/evo/apps/admin"
+	"github.com/getevo/evo/apps/adminlte"
+	"github.com/getevo/evo/apps/auth"
+	"github.com/getevo/evo/apps/query"
+	"github.com/getevo/evo/apps/test"
 )
 
 func main() {

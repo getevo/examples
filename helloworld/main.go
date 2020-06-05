@@ -1,8 +1,8 @@
 package main
 
 import (
+	"github.com/getevo/evo"
 	"github.com/gofiber/fiber"
-	"github.com/iesreza/io"
 )
 
 type MyModel struct {
