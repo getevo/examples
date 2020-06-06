@@ -7,12 +7,14 @@ import (
 	"github.com/getevo/evo/apps/auth"
 	"github.com/getevo/evo/apps/query"
 	"github.com/getevo/evo/apps/test"
+	"github.com/getevo/examples/strange"
 )
 
 func main() {
 
 	evo.Setup()
 	adminlte.Register()
+	strange.Register()
 	admin.Register()
 	auth.Register()
 	query.Register()
