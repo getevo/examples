@@ -50,3 +50,7 @@ func (App) Menus() []menu.Menu {
 
 // WhenReady called after setup all apps
 func (App) WhenReady() {}
+
+func (App) Pack() {
+	evo.Pack(Path)
+}
