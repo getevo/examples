@@ -1,6 +1,6 @@
 # App configurations
 app:
-  name: "IO Sample"
+  name: "EVO Sample"
   language: en-GB
   static: ./httpdocs
   session-age: 60
@@ -13,7 +13,7 @@ jwt:
   issuer: "io"
   audience: ["*"]
   age: 24h
-  subject: "IO App"
+  subject: "EVO App"
 
 # Server configurations
 server:
@@ -22,7 +22,7 @@ server:
   https: false
   cert:  cert.pem
   key:   key.pem
-  name:  "IO"
+  name:  "EVO"
   strict-routing: false
   case-sensitive: false
   max-upload-size: 5M
