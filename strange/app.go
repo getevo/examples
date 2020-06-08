@@ -25,7 +25,6 @@ func Register() {
 func (App) Register() {
 	fmt.Println("Strange Registered")
 	Path = evo.GuessAsset(App{})
-	fmt.Println(Path + "/views")
 	views = evo.RegisterView("strange", Path+"/views")
 }
 

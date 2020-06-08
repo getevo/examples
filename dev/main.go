@@ -5,6 +5,7 @@ import (
 	"github.com/getevo/evo/apps/admin"
 	"github.com/getevo/evo/apps/adminlte"
 	"github.com/getevo/evo/apps/auth"
+	"github.com/getevo/evo/apps/bible"
 	"github.com/getevo/evo/apps/query"
 	"github.com/getevo/evo/apps/test"
 	"github.com/getevo/examples/strange"
@@ -19,5 +20,6 @@ func main() {
 	auth.Register()
 	query.Register()
 	test.Register()
+	bible.Register()
 	evo.Run()
 }
