@@ -6,7 +6,6 @@ import (
 	"github.com/getevo/evo"
 	"github.com/getevo/evo/menu"
 	"github.com/getevo/evo/user"
-	"github.com/gofiber/fiber"
 )
 
 var Path string
@@ -31,8 +30,7 @@ func (App) Register() {
 // Router setup routers
 func (App) Router() {
 
-	evo.Get("admin/strange", func(ctx *fiber.Ctx) {
-		r := evo.Upgrade(ctx)
+	evo.Get("admin/strange", func(r *evo.Request) {
 		r.RenderView(nil, "strange.test")
 	})
 }

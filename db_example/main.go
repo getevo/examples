@@ -5,18 +5,15 @@ import (
 	"fmt"
 
 	"github.com/getevo/evo"
-	"github.com/gofiber/fiber"
 )
 
 ///
 func main() {
 	evo.Setup()
-	evo.Get("/", func(ctx *fiber.Ctx) {
+	evo.Get("/", func(r *evo.Request) {
 
 		fmt.Println("DB Examples Registered")
 
-		r := evo.Upgrade(ctx)
-		r.Download()
 		//b = evo.GetDBO()
 		/*type User struct {
 			username  	string
