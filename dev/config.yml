@@ -27,7 +27,7 @@ server:
   case-sensitive: false
   max-upload-size: 5M
   request-id: true
-  debug: true
+  debug: false
   recover: false
 
 # Database credentials
