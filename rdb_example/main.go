@@ -4,7 +4,9 @@ package main
 import (
 	"github.com/getevo/evo"
 	"github.com/getevo/evo/apps/rdb"
+	"github.com/getevo/evo/lib"
 	"github.com/getevo/evo/lib/log"
+	"strconv"
 )
 
 type User struct {
@@ -26,11 +28,16 @@ func main() {
 		log.Fatal("Null db")
 	}
 	query := db.Query("SELECT id,name,password FROM users WHERE id = ?")
-	query.SetParser(&rdb.Parser{
+	parser := &rdb.Parser{
 		Params: []rdb.Param{
 			{"id", rdb.URL, "numeric"},
 		},
-	})
+	}
+	parser.Processor = func(params []string) []string {
+		params[0] = strconv.Itoa(lib.ParseSafeInt(params[0]) + 1)
+		return params
+	}
+	query.SetParser(parser)
 
 	evo.Get("/api/test/:id", func(r *evo.Request) {
 		data := User{}
