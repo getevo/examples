@@ -30,7 +30,7 @@ func main() {
 	query := db.CreateQuery("myquery", "SELECT id,name,password FROM users WHERE id = ?")
 	parser := &rdb.Parser{
 		Params: []rdb.Param{
-			{"id", rdb.URL, "numeric"},
+			{"id", rdb.URL, "numeric", ""},
 		},
 	}
 	parser.Processor = func(params []string) []string {
