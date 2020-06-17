@@ -19,7 +19,7 @@ type User struct {
 func main() {
 	evo.Setup()
 	rdb.Register()
-	err := rdb.CreateConnection("localhost", "mysql", "root:@/cochlear?charset=utf8&parseTime=True")
+	_, err := rdb.CreateConnection("localhost", "mysql", "root:@/cochlear?charset=utf8&parseTime=True")
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -27,7 +27,7 @@ func main() {
 	if db == nil {
 		log.Fatal("Null db")
 	}
-	query := db.Query("SELECT id,name,password FROM users WHERE id = ?")
+	query := db.CreateQuery("myquery", "SELECT id,name,password FROM users WHERE id = ?")
 	parser := &rdb.Parser{
 		Params: []rdb.Param{
 			{"id", rdb.URL, "numeric"},
