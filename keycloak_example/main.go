@@ -8,6 +8,6 @@ import (
 func main() {
 
 	evo.Setup()
-	keycloak.Register("https://auth.keycloak.org", "realm", "dev")
+	keycloak.Register("https://authfootters.ies-italia.it", "footters", "dev")
 	evo.Run()
 }
