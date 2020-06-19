@@ -5,7 +5,6 @@ import (
 	"github.com/CloudyKit/jet"
 	"github.com/getevo/evo"
 	"github.com/getevo/evo/menu"
-	"github.com/getevo/evo/user"
 )
 
 var Path string
@@ -36,8 +35,8 @@ func (App) Router() {
 }
 
 // Permissions setup permissions of app
-func (App) Permissions() []user.Permission {
-	return []user.Permission{}
+func (App) Permissions() []evo.Permission {
+	return []evo.Permission{}
 }
 
 // Menus setup menus

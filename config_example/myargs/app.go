@@ -5,7 +5,6 @@ import (
 	"github.com/getevo/evo"
 	"github.com/getevo/evo/lib/log"
 	"github.com/getevo/evo/menu"
-	"github.com/getevo/evo/user"
 )
 
 // Register register the admin in io apps
@@ -41,8 +40,8 @@ func (App) WhenReady() {
 func (App) Router() {}
 
 // Permissions setup permissions of app
-func (App) Permissions() []user.Permission {
-	return []user.Permission{}
+func (App) Permissions() []evo.Permission {
+	return []evo.Permission{}
 }
 
 // Menus setup menus
