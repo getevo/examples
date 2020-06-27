@@ -28,3 +28,6 @@ gen
 
 # vscode
 .vscode
+#
+# added binary
+db_example/db_example
