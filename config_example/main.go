@@ -1,9 +1,10 @@
 package main
 
 import (
-	"github.com/getevo/evo"
-	"github.com/getevo/examples/config_example/myargs"
+	"examples/config_example/myargs"
 	"log"
+
+	"github.com/getevo/evo"
 )
 
 // Custom config
