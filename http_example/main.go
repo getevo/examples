@@ -11,7 +11,7 @@ func main() {
 	evo.Setup()
 	rdb.Register()
 	evo.Get("/", func(r *evo.Request) {
-		r.WriteResponse("data")
+		r.WriteResponse("data allan")
 	})
 	/*func(r *evo.Request) {
 		fmt.Println("http Registered")
